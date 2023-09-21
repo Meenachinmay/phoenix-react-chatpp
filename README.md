@@ -1,5 +1,3 @@
-Of course, Chinmay Anand. Here's a consolidated README.md for you:
-
 ---
 
 # Real-Time Chat App
