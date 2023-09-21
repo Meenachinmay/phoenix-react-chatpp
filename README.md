@@ -1,6 +1,6 @@
 ---
 
-# Real-Time Chat App
+# Phoenix and ReactJS => Real-Time Chat App
 
 ![Banner](https://dev-to-uploads.s3.amazonaws.com/uploads/articles/7ocqbjguncm8wl2k98ma.png)
 
@@ -63,4 +63,4 @@ Made with :heart: by Chinmay Anand
 
 ---
 
-Remember to replace the placeholders `[[Your-Repository-URL](https://github.com/Meenachinmay/phoenix-react-chatpp)]` and `[Phoenix Chat App]` with the actual details of your project.
+Remember to replace the placeholders `[(https://github.com/Meenachinmay/phoenix-react-chatpp)]` and `[Phoenix Chat App]` with the actual details of your project.
