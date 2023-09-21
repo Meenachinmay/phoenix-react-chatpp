@@ -11,7 +11,9 @@ import ChatRoom from "./ChatRoom.jsx";
 import TestPhoenix from "./TestPhoenix.jsx";
 import Welcome from "./components/Welcome.jsx";
 
-import theme  from '../src/chakraUI/theme.js'
+import theme from "../src/chakraUI/theme.js";
+import Login from "./components/Login.jsx";
+import SignUp from "./components/SignUp.jsx";
 
 const router = createBrowserRouter([
   {
@@ -21,6 +23,14 @@ const router = createBrowserRouter([
   {
     path: "/chat-room",
     element: <ChatRoom />,
+  },
+  {
+    path: "/login",
+    element: <Login />,
+  },
+  {
+    path: "/signup",
+    element: <SignUp />,
   },
   {
     path: "/test-phoenix",

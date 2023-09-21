@@ -1,6 +1,23 @@
 import { Flex, Text, Box, HStack, VStack, Button } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 
+import { motion } from 'framer-motion';
+
+// define the animation variants
+const fadeInUpwards = {
+  hidden: {
+    y: 20,
+    opacity: 0
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.7, // This will make the animation take 1 second.
+    },
+  },
+};
+
 const Welcome = () => {
   const fullTextLines = [
     "A real-time group chat application built on phoenix backend and",
@@ -52,10 +69,14 @@ const Welcome = () => {
               justifyContent={"center"}
             >
               <Text
+                initial="hidden"
+                animate="visible"
+                variants={fadeInUpwards}
                 fontFamily={"Rajdhani"}
                 fontSize={"7xl"}
                 fontWeight={"extrabold"}
                 color={"white"}
+                as={motion.div}
               >
                 Phoenix & Elixir
               </Text>
