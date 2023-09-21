@@ -8,6 +8,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 
 import ErrorPage from "./not-found.jsx";
 import ChatRoom from "./ChatRoom.jsx";
+import TestPhoenix from "./TestPhoenix.jsx";
+import Welcome from "./components/Welcome.jsx";
+
+import theme  from '../src/chakraUI/theme.js'
 
 const router = createBrowserRouter([
   {
@@ -16,16 +20,24 @@ const router = createBrowserRouter([
   },
   {
     path: "/chat-room",
-    element: <ChatRoom />
+    element: <ChatRoom />,
   },
   {
-    errorElement: <ErrorPage />
-  }
+    path: "/test-phoenix",
+    element: <TestPhoenix />,
+  },
+  {
+    path: "/welcome",
+    element: <Welcome />,
+  },
+  {
+    errorElement: <ErrorPage />,
+  },
 ]);
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <React.StrictMode>
-    <ChakraBaseProvider>
+    <ChakraBaseProvider theme={theme}>
       <RouterProvider router={router} />
     </ChakraBaseProvider>
   </React.StrictMode>

@@ -1,6 +1,8 @@
 import { Flex, Text, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 
+import './App.css';
+
 function App() {
   return (
     <Flex
