@@ -32,12 +32,19 @@ const Welcome = () => {
         <Flex
           width={"50%"}
           height={"full"}
-          bg={"gray.800"}
+          className="welcome_page_left_side"
           padding={"20px"}
           alignItems={"center"}
           justifyContent={"center"}
+          boxShadow={'lg'}
+          shadow={'lg'}
         >
-          <Flex flexDir={"column"} width={"full"} alignItems={'center'} justifyContent={'center'}>
+          <Flex
+            flexDir={"column"}
+            width={"full"}
+            alignItems={"center"}
+            justifyContent={"center"}
+          >
             <Flex
               width={"full"}
               flexDir={"column"}
@@ -77,7 +84,11 @@ const Welcome = () => {
             </Flex>
           </Flex>
         </Flex>
-        <Flex width={"50%"} height={"full"} bg={"orange.300"}></Flex>
+        <Flex
+          className="welcome_page_right_side"
+          width={"50%"}
+          height={"full"}
+        ></Flex>
       </Flex>
     </>
   );

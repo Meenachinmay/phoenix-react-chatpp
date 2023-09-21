@@ -1,9 +1,47 @@
 @keyframes blinkCursor {
-  0% { opacity: 0; }
-  50% { opacity: 1; }
-  100% { opacity: 0; }
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 span {
   animation: blinkCursor 1s infinite;
 }
+
+/* main--- */
+/* .welcome_page_left_side {
+  background: rgb(112, 35, 147);
+  background: linear-gradient(
+    180deg,
+    rgba(112, 35, 147, 1) 6%,
+    rgba(27, 20, 29, 1) 97%,
+    rgba(17, 16, 17, 1) 100%
+  );
+  backdrop-filter: blur(50px);
+} */
+
+.welcome_page_left_side {
+  background: linear-gradient(
+    180deg,
+    rgba(255, 165, 0, 0.5),  /* orange */
+    rgba(220, 20, 60, 0.5)   /* crimson */
+  );
+  backdrop-filter: blur(50px);
+}
+
+.welcome_page_right_side {
+  background-color: rgb(232, 200, 141);  /* Orange */
+  clip-path: polygon(
+    0% 0%,
+    100% 0%,
+    100% 30%,
+    0% 70%
+  );
+}
+
