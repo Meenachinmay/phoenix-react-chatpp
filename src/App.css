@@ -29,19 +29,18 @@ span {
 .welcome_page_left_side {
   background: linear-gradient(
     180deg,
-    rgba(255, 165, 0, 0.5),  /* orange */
-    rgba(220, 20, 60, 0.5)   /* crimson */
+    rgba(255, 165, 0, 0.5),
+    /* orange */ rgba(220, 20, 60, 0.5) /* crimson */
   );
   backdrop-filter: blur(50px);
 }
 
 .welcome_page_right_side {
-  background-color: rgb(232, 200, 141);  /* Orange */
-  clip-path: polygon(
-    0% 0%,
-    100% 0%,
-    100% 30%,
-    0% 70%
-  );
+  background-color: rgb(232, 200, 141); /* Orange */
+  clip-path: polygon(0% 0%, 100% 0%, 100% 30%, 0% 70%);
+  z-index: 1;
 }
 
+.login_container {
+  /* background-color: rgb(232, 200, 141); Orange */
+}

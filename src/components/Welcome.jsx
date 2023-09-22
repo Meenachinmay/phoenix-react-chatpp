@@ -1,13 +1,16 @@
 import { Flex, Text, Box, HStack, VStack, Button } from "@chakra-ui/react";
 import React, { useState, useEffect } from "react";
 
-import { motion } from 'framer-motion';
+import Login from "./Login";
+import SignUp from "./SignUp";
+
+import { motion } from "framer-motion";
 
 // define the animation variants
 const fadeInUpwards = {
   hidden: {
     y: 20,
-    opacity: 0
+    opacity: 0,
   },
   visible: {
     y: 0,
@@ -27,6 +30,7 @@ const Welcome = () => {
 
   const [lineIndex, setLineIndex] = useState(0);
   const [charIndex, setCharIndex] = useState(0);
+  const [authView, setAuthView] = useState('signup')
 
   useEffect(() => {
     const currentLine = fullTextLines[lineIndex];
@@ -53,8 +57,8 @@ const Welcome = () => {
           padding={"20px"}
           alignItems={"center"}
           justifyContent={"center"}
-          boxShadow={'lg'}
-          shadow={'lg'}
+          boxShadow={"lg"}
+          shadow={"lg"}
         >
           <Flex
             flexDir={"column"}
@@ -106,10 +110,28 @@ const Welcome = () => {
           </Flex>
         </Flex>
         <Flex
-          className="welcome_page_right_side"
+          position={"relative"}
           width={"50%"}
           height={"full"}
-        ></Flex>
+        >
+          <Flex
+            className="welcome_page_right_side"
+            width={"full"}
+            height={"full"}
+          ></Flex>
+          <Flex
+            alignItems={"center"}
+            justifyContent={"center"}
+            position="absolute"
+            top={0}
+            left={0}
+            width={"100%"}
+            height={"100%"}
+            zIndex={2}
+          >
+           { authView == 'login' ? <Login /> : <SignUp />} 
+          </Flex>
+        </Flex>
       </Flex>
     </>
   );
